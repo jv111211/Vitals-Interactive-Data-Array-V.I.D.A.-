@@ -22,29 +22,22 @@ import javafx.stage.Stage;
 public class VIDA extends Application {
     
     @Override
-    public void start(Stage stage) {
+    public void start(Stage stage) throws IOException {
         
-        try {
+        
             GridPane all = new GridPane();
-            System.out.println("I just created the GridPane");
             
             Parent FarmWorker = FXMLLoader.load(getClass().getResource("/vida/View/FarmWorker/MainFarmer.fxml"));
-            System.out.println("I created the Parent for MainFarmer");
             Parent CrewLead = FXMLLoader.load(getClass().getResource("/vida/View/CrewLeaders/MainCrewLead.fxml"));
-            System.out.println("I created the Parent for CrewLead");
             Parent FarmOwner = FXMLLoader.load(getClass().getResource("/vida/View/FarmOwner/MainFarmOwner.fxml"));
-            System.out.println("I created the Parent for FarmOwner");
             
             all.addColumn(0, FarmWorker, CrewLead, FarmOwner);
-            System.out.println("I just made a row");
             Scene scene = new Scene(all);
-            System.out.println("I made the scene");
-            
+            scene.getStylesheets().add(getClass().getResource("/material-fx-v0_3.css").toExternalForm());
+	       
             stage.setScene(scene);
             stage.show();
-        } catch (IOException ex) {
-            System.out.println(ex.getMessage());
-        }
+        
     }
 
     /**
