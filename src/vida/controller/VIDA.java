@@ -24,16 +24,15 @@ public class VIDA extends Application {
     @Override
     public void start(Stage stage) throws IOException {
         
-        
             GridPane all = new GridPane();
             
             Parent FarmWorker = FXMLLoader.load(getClass().getResource("/vida/View/FarmWorker/MainFarmer.fxml"));
             Parent CrewLead = FXMLLoader.load(getClass().getResource("/vida/View/CrewLeaders/MainCrewLead.fxml"));
             Parent FarmOwner = FXMLLoader.load(getClass().getResource("/vida/View/FarmOwner/MainFarmOwner.fxml"));
             
-            all.addColumn(0, FarmWorker, CrewLead, FarmOwner);
-            Scene scene = new Scene(all);
-            scene.getStylesheets().add(getClass().getResource("/material-fx-v0_3.css").toExternalForm());
+            all.addColumn(0, CrewLead, FarmOwner);
+            Scene scene = new Scene(FarmWorker);
+            all.getStylesheets().add(getClass().getResource("/material-fx-v0_3.css").toExternalForm());
 	       
             stage.setScene(scene);
             stage.show();
