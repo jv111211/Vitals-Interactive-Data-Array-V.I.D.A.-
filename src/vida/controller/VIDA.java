@@ -20,7 +20,6 @@ import javafx.stage.Stage;
  * @author Jorge V. Vargas Jr.
  */
 public class VIDA extends Application {
-    
     @Override
     public void start(Stage stage) throws IOException {
         
@@ -30,10 +29,9 @@ public class VIDA extends Application {
             Parent CrewLead = FXMLLoader.load(getClass().getResource("/vida/View/CrewLeaders/MainCrewLead.fxml"));
             Parent FarmOwner = FXMLLoader.load(getClass().getResource("/vida/View/FarmOwner/MainFarmOwner.fxml"));
             
-            all.addColumn(0, CrewLead, FarmOwner);
+            //all.addRow(0,FarmWorker,CrewLead,FarmOwner);
             Scene scene = new Scene(FarmWorker);
-            all.getStylesheets().add(getClass().getResource("/material-fx-v0_3.css").toExternalForm());
-	       
+            
             stage.setScene(scene);
             stage.show();
         

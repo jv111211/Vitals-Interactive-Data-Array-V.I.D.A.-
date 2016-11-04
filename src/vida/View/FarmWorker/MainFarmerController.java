@@ -45,6 +45,9 @@ public class MainFarmerController implements Initializable {
             });
         }
     }  
+    public void setField(String my){
+        valueTextField.setText(my);
+    }
     public void setBar(double val){
         if(val<=.5) {
             progress.setStyle("-fx-accent: green");
