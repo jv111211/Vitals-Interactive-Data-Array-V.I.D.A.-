@@ -3,9 +3,8 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package vida.View.FarmWorker;
+package All;
 
-import vida.View.CrewLeaders.*;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
@@ -25,7 +24,8 @@ import javafx.scene.layout.Pane;
  */
 public class MainFarmerController implements Initializable {
     
-    MainCrewLeadController control;
+    
+    MainCrewLeadController control = new MainCrewLeadController();
     @FXML ProgressBar progress;
     @FXML TextField valueTextField;
     @FXML Pane alertPane;
@@ -64,16 +64,19 @@ public class MainFarmerController implements Initializable {
             progress.setStyle("-fx-accent: green");
             alertPane.setVisible(false);
             alertLabel.setText(null);
+            control.removeAlert();
         }
         else if(val>.5&&val<=.8){ 
             progress.setStyle("-fx-accent: yellow");
             alertPane.setVisible(true);
             alertLabel.setText("DRINK WATER");
+            control.setAlert();
         }
         else if(val>.8) {
             progress.setStyle("-fx-accent: red");
             alertPane.setVisible(true);
             alertLabel.setText("DRINK WATER IMMEDIATELY");
+            control.setAlert();
         }
         progress.setProgress(val);
     }

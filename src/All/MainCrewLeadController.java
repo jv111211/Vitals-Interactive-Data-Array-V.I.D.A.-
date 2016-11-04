@@ -3,9 +3,8 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package vida.View.CrewLeaders;
+package All;
 
-import vida.View.FarmWorker.*;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.fxml.FXML;
@@ -28,6 +27,14 @@ public class MainCrewLeadController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
+    }
+    public void setAlert(){
+        myPane.setVisible(true);
+        myLabel.setText("Farmer needs a cup of water!");
+    }
+    public void removeAlert(){
+        myPane.setVisible(false);
+        myLabel.setText(null);
     }
     
 }

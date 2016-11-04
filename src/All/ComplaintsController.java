@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package vida.View.CrewLeaders;
+package All;
 
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -14,7 +14,7 @@ import javafx.fxml.Initializable;
  *
  * @author Jorge V. Vargas Jr.
  */
-public class MonitorVitalsAllController implements Initializable {
+public class ComplaintsController implements Initializable {
 
     /**
      * Initializes the controller class.
