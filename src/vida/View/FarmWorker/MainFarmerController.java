@@ -30,20 +30,29 @@ public class MainFarmerController implements Initializable {
     @FXML Pane vitalsPane;
     @FXML Label alertLabel;
     @FXML Button vitalsBtn;
+    
+    @FXML
+    private void handleVitals(ActionEvent event) {
+        vitalsPane.setVisible(true);
+    }
+    @FXML
+    private void handleNonVitals(ActionEvent event){
+        vitalsPane.setVisible(false);
+    }
     /**
      * Initializes the controller class.
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
-        if(valueTextField.getText()!=null){
-            valueTextField.setOnAction(new EventHandler<ActionEvent>() {
-                @Override
-                public void handle(ActionEvent event) {
-                    setBar(Double.parseDouble(valueTextField.getText()));
-                }
-            });
-        }
+//        if(valueTextField.getText()!=null){
+//            valueTextField.setOnAction(new EventHandler<ActionEvent>() {
+//                @Override
+//                public void handle(ActionEvent event) {
+//                    setBar(Double.parseDouble(valueTextField.getText()));
+//                }
+//            });
+//        }
     }  
     public void setBar(double val){
         if(val<=.5) {
@@ -62,9 +71,5 @@ public class MainFarmerController implements Initializable {
             alertLabel.setText("DRINK WATER IMMEDIATELY");
         }
         progress.setProgress(val);
-    }
-    @FXML
-    private void handleVitals(ActionEvent event) {
-        vitalsPane.setVisible(true);
     }
 }

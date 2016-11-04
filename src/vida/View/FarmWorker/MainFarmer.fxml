@@ -4,7 +4,6 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ProgressBar?>
-<?import javafx.scene.control.TextField?>
 <?import javafx.scene.effect.Blend?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -17,7 +16,7 @@
       <HBox alignment="CENTER" layoutY="214.0" prefHeight="100.0" prefWidth="556.0" spacing="33.0">
          <children>
               
-                    <Button maxHeight="100.0" maxWidth="100.0" minHeight="100.0" minWidth="100.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="85.0"> 
+                    <Button fx:id="connBtn" maxHeight="100.0" maxWidth="100.0" minHeight="100.0" minWidth="100.0" mnemonicParsing="false" onAction="#handleNonVitals" prefHeight="60.0" prefWidth="85.0"> 
                   <graphic>
                       <ImageView fitHeight="90.0" fitWidth="90.0">
                      <image>
@@ -35,7 +34,7 @@
                   </ImageView>
                   </graphic>
               </Button>
-              <Button maxHeight="100.0" maxWidth="100.0" minHeight="100.0" minWidth="100.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="100.0">
+              <Button fx:id="OSHABtn" maxHeight="100.0" maxWidth="100.0" minHeight="100.0" minWidth="100.0" mnemonicParsing="false" onAction="#handleNonVitals" prefHeight="100.0" prefWidth="100.0">
                   <graphic>
                       <ImageView fitHeight="30.0" fitWidth="95.0">
                      <image>
@@ -44,9 +43,9 @@
                   </ImageView>
                   </graphic>
               </Button>
-              <Button maxHeight="100.0" maxWidth="100.0" minHeight="100.0" minWidth="100.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="100.0">
+              <Button fx:id="complaintBtn" maxHeight="100.0" maxWidth="100.0" minHeight="100.0" minWidth="100.0" mnemonicParsing="false" onAction="#handleNonVitals" prefHeight="100.0" prefWidth="100.0">
                   <graphic>
-                      <ImageView fitHeight="90.0" fitWidth="90.0">
+                      <ImageView fx:id="ComplaintBtn" fitHeight="90.0" fitWidth="90.0">
                      <image>
                         <Image url="@../../images/ComplaintFiling.png" />
                      </image>
@@ -66,7 +65,6 @@
                   <Blend />
                </effect>
             </ProgressBar>
-            <TextField fx:id="valueTextField" layoutX="14.0" layoutY="14.0" />
             <Pane fx:id="alertPane" layoutX="300.0" layoutY="10.0" prefHeight="200.0" prefWidth="247.0" visible="false">
                <children>
                   <Label fx:id="alertLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="8.0" layoutY="147.0" prefHeight="21.0" prefWidth="237.0" />
