@@ -26,6 +26,13 @@ public class Db {
         private String name;
         private int Dehydration, Blood_Preassure, Blood_Preassure2, heart_rate, uniqueID;
         
+        /**
+         * @param crewLeader The name of the crewLeader in String.
+         * @param complaint The complaint in form of String.
+         * 
+         * This function, when called, logs a complaint against the crew leader that can later be
+         * seen by the farm owner.
+        */
         public  void fileComplaint(String crewLeader, String complaint) throws SQLException{
             Connection conn = DriverManager.getConnection(DB, User, Password);
             
@@ -37,6 +44,13 @@ public class Db {
 			addDB.close();
         }
     
+        /**
+         * @param username The username of the login in String.
+         * @param password The password for the username in String.
+         * @return Returns true if the login was correct else False.
+         * 
+         * This function confirms if the user exists.
+         */
     	public  boolean confirmLogin(String username, String password) throws SQLException {
 		Connection conn = DriverManager.getConnection(DB, User, Password);
 		ResultSet userSearch = conn.createStatement().executeQuery(
@@ -56,7 +70,10 @@ public class Db {
 		}
 		
 	}
-        
+        /**
+         * 
+         * @param uniqueId The unique ID of the user given by the patch.
+         */
         public  void updateDB(int uniqueId, String name, int Dehydration, int Blood_Preassure, int Blood_Preassure2, int heart_rate) throws SQLException {
 		Connection conn = DriverManager.getConnection(DB, User, Password);
 		PreparedStatement updateDB = conn
