@@ -1,13 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.layout.AnchorPane?>
 
-
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.60" fx:controller="vida.View.FarmOwner.MainFarmOwnerController">
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="vida.View.FarmOwner.MainFarmOwnerController">
    <children>
-      <Label layoutX="195.0" layoutY="328.0" text="This is the Farm Owner's Screen" />
-      <TextArea layoutX="46.0" layoutY="58.0" prefHeight="200.0" prefWidth="509.0" />
+      <Label layoutX="234.0" layoutY="355.0" prefHeight="27.0" prefWidth="132.0" text="Farm Owner's Screen" />
+      <TextArea layoutX="30.0" layoutY="37.0" prefHeight="305.0" prefWidth="540.0" />
+      <Button layoutX="195.0" layoutY="291.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="113.0" text="Farmers Log" />
+      <Button layoutX="323.0" layoutY="291.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="113.0" text="Complaints" />
+      <Button layoutX="47.0" layoutY="291.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="132.0" text="Crew Leader Log" />
+      <Button layoutX="450.0" layoutY="291.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="98.0" text="OSHA" />
    </children>
 </AnchorPane>
