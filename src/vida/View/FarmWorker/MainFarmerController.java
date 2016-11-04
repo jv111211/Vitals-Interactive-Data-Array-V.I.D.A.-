@@ -7,7 +7,6 @@ package vida.View.FarmWorker;
 
 import java.net.URL;
 import java.util.ResourceBundle;
-import java.util.Scanner;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
@@ -45,8 +44,7 @@ public class MainFarmerController implements Initializable {
                 }
             });
         }
-        
-    }    
+    }  
     public void setBar(double val){
         if(val<=.5) {
             progress.setStyle("-fx-accent: green");
@@ -64,5 +62,9 @@ public class MainFarmerController implements Initializable {
             alertLabel.setText("DRINK WATER IMMEDIATELY");
         }
         progress.setProgress(val);
+    }
+    @FXML
+    private void handleVitals(ActionEvent event) {
+        vitalsPane.setVisible(true);
     }
 }
