@@ -27,8 +27,8 @@ public class VIDA extends Application {
             Parent CrewLead = FXMLLoader.load(getClass().getResource("/vida/View/CrewLeaders/MainCrewLead.fxml"));
             Parent FarmOwner = FXMLLoader.load(getClass().getResource("/vida/View/FarmOwner/MainFarmOwner.fxml"));
             
-            //all.addRow(0,FarmWorker,CrewLead,FarmOwner);
-            Scene scene = new Scene(FarmWorker);
+            all.addRow(0,FarmWorker,CrewLead,FarmOwner);
+            Scene scene = new Scene(all);
             
             stage.setScene(scene);
             stage.show();

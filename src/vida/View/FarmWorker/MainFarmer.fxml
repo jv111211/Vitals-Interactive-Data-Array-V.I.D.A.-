@@ -4,6 +4,7 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.effect.Blend?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -60,7 +61,7 @@
       <Pane fx:id="vitalsPane" prefHeight="220.0" prefWidth="556.0" visible="false">
          <children>
             <Label layoutX="5.0" layoutY="62.0" prefHeight="21.0" prefWidth="100.0" text="DeHydration:" />
-            <ProgressBar fx:id="progress" blendMode="SRC_ATOP" layoutX="120.0" layoutY="62.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="23.0" prefWidth="171.0" progress="0.71" style="-fx-background-color: red;">
+            <ProgressBar fx:id="progress" blendMode="SRC_ATOP" layoutX="120.0" layoutY="62.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="23.0" prefWidth="171.0" progress="0.0" style="-fx-background-color: red;">
                <effect>
                   <Blend />
                </effect>
@@ -75,6 +76,7 @@
                   </ImageView>
                </children>
             </Pane>
+            <TextField fx:id="valueTextField" />
          </children>
       </Pane>
    </children>

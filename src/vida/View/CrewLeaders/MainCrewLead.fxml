@@ -1,13 +1,70 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
 
-
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.60" fx:controller="vida.View.CrewLeaders.MainCrewLeadController">
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="vida.View.CrewLeaders.MainCrewLeadController">
    <children>
-      <Label layoutX="225.0" layoutY="324.0" text="Crew Leader's Window" />
-      <TextArea layoutX="81.0" layoutY="54.0" prefHeight="200.0" prefWidth="438.0" />
+      <HBox alignment="CENTER" layoutX="10.0" layoutY="224.0" prefHeight="100.0" prefWidth="556.0" spacing="33.0">
+         <children>
+            <Button fx:id="connBtn" maxHeight="100.0" maxWidth="100.0" minHeight="100.0" minWidth="100.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="85.0">
+               <graphic>
+                  <ImageView fitHeight="90.0" fitWidth="90.0">
+                     <image>
+                        <Image url="@../../images/Connect.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="vitalsBtn" maxHeight="100.0" maxWidth="100.0" minHeight="100.0" minWidth="100.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="100.0">
+               <graphic>
+                  <ImageView fitHeight="90.0" fitWidth="90.0">
+                     <image>
+                        <Image url="@../../images/Vitals.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="OSHABtn" maxHeight="100.0" maxWidth="100.0" minHeight="100.0" minWidth="100.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="100.0">
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="95.0">
+                     <image>
+                        <Image url="@../../images/OSHA.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="complaintBtn" maxHeight="100.0" maxWidth="100.0" minHeight="100.0" minWidth="100.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="100.0">
+               <graphic>
+                  <ImageView fx:id="ComplaintBtn" fitHeight="90.0" fitWidth="90.0">
+                     <image>
+                        <Image url="@../../images/ComplaintFiling.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+      </HBox>
+      <Label fx:id="alertLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="18.0" layoutY="157.0" prefHeight="21.0" prefWidth="237.0" />
+      <Pane fx:id="alertPane" layoutX="165.0" layoutY="24.0" prefHeight="200.0" prefWidth="247.0">
+         <children>
+            <Label fx:id="alertLabel1" alignment="CENTER" contentDisplay="CENTER" layoutX="5.0" layoutY="155.0" prefHeight="21.0" prefWidth="237.0" text="Warnings" />
+            <ImageView fitHeight="134.0" fitWidth="153.0" layoutX="22.0" layoutY="19.0" pickOnBounds="true" preserveRatio="true" x="25.0">
+               <image>
+                  <Image url="@../../images/alert.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="102.0" layoutY="364.0" prefHeight="21.0" prefWidth="407.0" text="*This is a MockUp of how the Crew Leader's UI will look." />
    </children>
 </AnchorPane>

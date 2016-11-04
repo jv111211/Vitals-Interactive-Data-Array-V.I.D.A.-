@@ -5,6 +5,7 @@
  */
 package vida.View.FarmWorker;
 
+import vida.View.CrewLeaders.*;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
@@ -24,6 +25,7 @@ import javafx.scene.layout.Pane;
  */
 public class MainFarmerController implements Initializable {
     
+    MainCrewLeadController control;
     @FXML ProgressBar progress;
     @FXML TextField valueTextField;
     @FXML Pane alertPane;
@@ -45,14 +47,14 @@ public class MainFarmerController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
-//        if(valueTextField.getText()!=null){
-//            valueTextField.setOnAction(new EventHandler<ActionEvent>() {
-//                @Override
-//                public void handle(ActionEvent event) {
-//                    setBar(Double.parseDouble(valueTextField.getText()));
-//                }
-//            });
-//        }
+        if(valueTextField.getText()!=null){
+            valueTextField.setOnAction(new EventHandler<ActionEvent>() {
+                @Override
+                public void handle(ActionEvent event) {
+                    setBar(Double.parseDouble(valueTextField.getText()));
+                }
+            });
+        }
     }  
     public void setField(String my){
         valueTextField.setText(my);
