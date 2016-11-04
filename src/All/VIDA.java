@@ -23,9 +23,9 @@ public class VIDA extends Application {
         
             GridPane all = new GridPane();
             
-            Parent FarmWorker = FXMLLoader.load(getClass().getResource("//All/MainFarmer.fxml"));
-            Parent CrewLead = FXMLLoader.load(getClass().getResource("//All/MainCrewLead.fxml"));
-            Parent FarmOwner = FXMLLoader.load(getClass().getResource("//All/MainFarmOwner.fxml"));
+            Parent FarmWorker = FXMLLoader.load(getClass().getResource("/All/MainFarmer.fxml"));
+            Parent CrewLead = FXMLLoader.load(getClass().getResource("/All/MainCrewLead.fxml"));
+            Parent FarmOwner = FXMLLoader.load(getClass().getResource("/All/MainFarmOwner.fxml"));
             
             all.addRow(0,CrewLead,FarmOwner);
             Scene scene = new Scene(FarmWorker);
